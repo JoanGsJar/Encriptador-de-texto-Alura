@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es-mx">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encriptador de texto</title>
+    <link rel="icon" href="./assets/logo alura sin fondo.png">
+    <link rel="stylesheet" href="./styles/diseño.css">
+</head>
+<body>
+    
+    <main class="container">
+        <div class="container__encriptar">
+            <div class="container__encriptar__titulo">
+                <img class="logo__alura" src="./assets/logo alura sin fondo.png" alt="logo de alura">
+                <h1 class="titulo__encriptar">Encriptador de texto</h1>
+            </div>
+            <textarea placeholder="Ingrese el texto aquí" type="text" required id="txt_ingreso"></textarea>
+            <div class="mensaje__encriptar">
+                <img class="imagen__encriptar" src="./assets/bi_exclamation-circle-fill.png" alt="señal de advertencia">
+                <p>Solo letras minusculas y sin acentos</p>
+            </div>
+            <div class="container__botones">
+                <button onclick="botonEncriptar();" class="boton__encriptar" >Encriptar</button>
+                <button onclick="botonDesencriptar();" class="boton__desencriptar" >Desencriptar</button>
+                <button onclick="limpiartexto();" class="boton__limpiar" disabled>Limpiar</button>
+            </div>
+        </div>
+        <div class="container__copiar">
+            <textarea class="texto__copiar" readonly id="txt_salida" rows="5" cols="1" ></textarea>
+            <div id="div_invisible" class="container__mensaje__copiar">
+                <img src="./assets/Muñeco (1).png" alt="imagen de una persona">
+                <p class="mensaje__1">Ningún mensaje fue encontrado</p>
+                <p class="mensaje__2">Ingresa el texto que desees encriptar o desencriptar.</p>
+            </div>
+            <button onclick="copiar();" class="boton__copiar" >Copiar</button>
+        </div>
+    </main>
+    <footer>
+        Desarrollado por Joan Guardia
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
