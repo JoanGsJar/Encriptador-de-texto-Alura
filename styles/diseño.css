@@ -9,12 +9,12 @@
     --color-negro:#28262C;
     --color-blanco:#f5f0fc;
     --color--azulbrivante:#14248A;
-    --color-violetaclaro:#D4C2FC;
     --color-violetapastel:#998FC7;
+    --fondo:linear-gradient(153deg, rgba(91,62,219,1) 36%, rgba(143,123,230,1) 62%, rgba(255,255,255,1) 96%);
+    --color-fondo-logo:#7257ec;
     --fuente-Playwrite: "Playwrite BE VLG",sans-serif;
     --fuente-Outfit: "Outfit", sans-serif;
-    --fuente-prompt:"Prompt", sans-serif;
-    --color-fondo-logo:#7257ec;
+    --fuente-prompt:"Prompt", sans-serif; 
 }
 
 
@@ -23,13 +23,12 @@
     padding: 0;
 }
 
-
 html {
     min-height: 100vh;
-    
 }
 body{
-    background: linear-gradient(153deg, rgba(91,62,219,1) 36%, rgba(143,123,230,1) 62%, rgba(255,255,255,1) 96%);
+    background:var(--fondo);
+    transition: all 2s;
 }
 
 textarea {
@@ -70,9 +69,21 @@ textarea {
     gap: 25%;
     box-sizing: border-box;
 }
-
+.modo__oscuro{
+    padding: 0;
+    border: none;
+    background:none;
+}
+.modo__oscuro:hover{
+    background: none;
+}
 .logo__alura{
     width: 60px;
+}
+.logo__alura:hover{
+    background-color:rgb(74, 52, 170);
+    border-radius: 0.6rem;
+    transition: 1s;
 }
 
 .titulo__encriptar{
@@ -110,12 +121,14 @@ textarea::placeholder{
 }
 
 button{
+    background-color: var(--color-blanco);
     font-family: var(--fuente-prompt);
     font-size: 1.15rem;
-    border-radius: 0.5rem;
+    border-radius: 0.75rem;
     border: 1px outset black;
     font-style: oblique;
     padding: 0.8rem 2rem;
+    
 }
 
 button:hover{
@@ -129,7 +142,7 @@ button:hover{
     justify-content: space-around;
     text-align: center;
     padding: 1% 2% 0 2%;
-    background-color:#7257ec;
+    background-color:var(--color-fondo-logo);
     border-radius: 2rem;
     box-sizing: border-box;
 }
@@ -168,7 +181,7 @@ button:hover{
 .boton__copiar{
     padding: 0.8rem 2rem;
     align-self: center;
-    margin: 0 0 0.8rem 0;
+    margin: 0 0 1.2rem 0;
     font-family: var(--fuente-prompt);
     font-size: 1.15rem;
 }
@@ -222,6 +235,7 @@ footer{
     .texto__copiar{
         height: 8rem;
         width: 100%;
+        padding: 1.5rem;
     }
     .container__mensaje__copiar{
         width: 100%;
@@ -278,4 +292,6 @@ footer{
     }
 
 }
+
+
 
