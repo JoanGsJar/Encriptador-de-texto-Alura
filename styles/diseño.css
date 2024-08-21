@@ -132,7 +132,7 @@ button{
 }
 
 button:hover{
-    background-color: var(--color-violetapastel);
+    background-color: #998FC7;
     font-size: 1.2rem;
 }
 .container__copiar{
