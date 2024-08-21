@@ -100,4 +100,28 @@ function copiar(){
     }
 }
 
+let estado = false;
+
+const modo = document.querySelector('.modo__oscuro');
+
+modo.addEventListener('click',()=>{
+    estado =!estado;
+    if(estado)
+    {
+        document.documentElement.style.setProperty("--fondo","linear-gradient(156deg, rgba(27,6,117,1) 50%, rgba(43,24,126,1) 65%, rgba(72,56,143,1) 84%, rgba(128,117,176,1) 100%, rgba(156,153,153,1) 100%)");
+        document.documentElement.style.setProperty("--color-fondo-logo","#2D13A2");
+        document.documentElement.style.setProperty("--color-violetapastel","00000");
+    }
+    else
+    {
+        document.documentElement.style.setProperty("--color-violetapastel","#998FC7");
+        document.documentElement.style.setProperty("--fondo","linear-gradient(153deg, rgba(91,62,219,1) 36%, rgba(143,123,230,1) 62%, rgba(255,255,255,1) 96%)");
+        document.documentElement.style.setProperty("--color-fondo-logo","#7257ec");
+    }
+});
+
+
+
+
+
 
