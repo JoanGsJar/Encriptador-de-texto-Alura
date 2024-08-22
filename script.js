@@ -1,5 +1,9 @@
 const textArea= document.getElementById("txt_ingreso");
 const mensaje = document.getElementById("txt_salida");
+let estado = false;
+const modo = document.querySelector('.modo__oscuro');
+const alerta = document.querySelector("#alerta");
+const cerrarAlerta = document.querySelector("#cerrar_alerta");
 const requisitos = /^[a-z\nñ\s]+$/;
 
 activarBoton('none');
@@ -24,7 +28,7 @@ function botonEncriptar()
     }
     else
     {
-        alert('El texto es invalido o no ha ingresado texto');
+        mostrarAlerta("El texto es invalido o no ha ingresado texto");
         mensaje.value = '';
         document.getElementById('div_invisible').style.display="initial";
     }
@@ -58,7 +62,7 @@ function botonDesencriptar()
     }
     else
     {
-        alert('El texto es invalido o no ha ingresado texto');
+        mostrarAlerta("El texto es invalido o no ha ingresado texto");
         mensaje.value = '';
         document.getElementById('div_invisible').style.display="initial";
     }
@@ -96,13 +100,9 @@ function copiar(){
     }
     else
     {
-        alert('Ingrese un texto para copiar');
+        mostrarAlerta("Ingrese un texto para copiar ");
     }
 }
-
-let estado = false;
-
-const modo = document.querySelector('.modo__oscuro');
 
 modo.addEventListener('click',()=>{
     estado =!estado;
@@ -119,6 +119,16 @@ modo.addEventListener('click',()=>{
         document.documentElement.style.setProperty("--color-fondo-logo","#7257ec");
     }
 });
+
+function mostrarAlerta(textoIngresado){
+    alerta.showModal();
+    let texto = document.querySelector("#mensaje_alerta");
+    texto.innerHTML=textoIngresado;
+}
+
+cerrarAlerta.addEventListener('click',()=>{
+    alerta.close();
+})
 
 
 
