@@ -46,7 +46,7 @@ En este proyecto se usaron llaves de encriptacion para poder encriptador el text
 
 ## Contribuciones
 
-¡Las contribuciones son bienvenidas! Puedes modificarte este proyecto sin ninguna restriccion, no dudes en hacer un fork del repositorio y enviar un pull request.
+¡Las contribuciones son bienvenidas! Puedes modificar este proyecto sin ninguna restriccion, no dudes en hacer un fork del repositorio y enviar un pull request.
   
 ## Redes Sociales
 <li> GitHub: https://github.com/JoanGsJar </li>
