@@ -4,7 +4,7 @@ let estado = false;
 const modo = document.querySelector('.modo__oscuro');
 const alerta = document.querySelector("#alerta");
 const cerrarAlerta = document.querySelector("#cerrar_alerta");
-const requisitos = /^[a-z\nñ\s]+$/;
+const requisitos = /^[a-z\s]+$/;
 
 activarBoton('none');
 
